@@ -1,21 +1,58 @@
-.header {
-  padding: 20px 0;
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-list {
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#searchForm {
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 70%;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gallery {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+.gallery img {
+  width: 100%;
+  height: auto;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
-}
+/* Add more styles based on your design */
