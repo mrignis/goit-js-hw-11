@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Search</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
-  </head>
-  <body>
+</head>
+<body>
     <div class="search-container">
-      <form class="search-form" id="search-form">
-        <input
-          class="search-form__input"
-          type="text"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder="Search images..."
-        />
-        <button class="search-form__button" type="submit">Search</button>
-      </form>
-
-      <div class="container">
+        <form class="search-form" id="search-form">
+            <input
+                class="search-form__input"
+                type="text"
+                name="searchQuery"
+                autocomplete="off"
+                placeholder="Search images..."
+            />
+            <button class="search-form__button" type="submit">Search</button>
+        </form>
+    </div>
+    <div class="container">
         <div class="gallery"></div>
-        <button type="button" class="load-more ">Load more</button>
-        <p class="end-collection-text">
-          We're sorry, but you've reached the end of search results.
+        <button type="button" class="load-more is-hidden">Load more</button>
+        <p class="end-collection-text is-hidden">
+            We're sorry, but you've reached the end of search results.
         </p>
-      </div>
     </div>
 
     <script type="module" src="./main.js"></script>
-  </body>
+</body>
 </html>
