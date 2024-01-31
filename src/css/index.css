@@ -64,12 +64,15 @@ img {
 .load-more {
     background-color: #2ecc71;
     color: #fff;
-    padding: 10px 15px;
+    padding: 10px 30px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     margin-top: 20px;
+     margin-bottom: 20px;
 }
+.load-more:hover,
+.load-more:focus{background-color: #2b7148;}
 
 .is-hidden {
     display: none;
