@@ -69,7 +69,7 @@ function onLoadMore() {
 function renderImages(queriesArray) {
   const markup = queriesArray
     .map(item => {
-      return `<div class="photo-card">
+      return `<a href="${item.largeImageURL}" class="photo-card" data-lightbox="gallery">
         <div class="thumb"><img src="${item.webformatURL}" alt="${item.tags}" loading="lazy" /></div>
         <div class="info">
           <p class="info-item"><b>Likes</b><span>${item.likes}</span></p>
@@ -77,8 +77,15 @@ function renderImages(queriesArray) {
           <p class="info-item"><b>Comments</b><span>${item.comments}</span></p>
           <p class="info-item"><b>Downloads</b><span>${item.downloads}</span></p>
         </div>
-      </div>`;
+      </a>`;
     })
     .join('');
   gallery.insertAdjacentHTML('beforeend', markup);
+
+  // Ініціалізація SimpleLightbox
+  const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+  });
 }

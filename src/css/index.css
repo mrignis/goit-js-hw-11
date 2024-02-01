@@ -22,8 +22,6 @@ body {
 
 .search-form {
     display: flex;
-    justify-content: center;
-    /* Зроблено централізацію для форми пошуку */
 }
 
 .search-form__input {
@@ -55,24 +53,19 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    flex-basis: calc((100% - 90px) / 4);
 }
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
+
 .load-more {
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #2ecc71;
     color: #fff;
-    padding: 10px 30px;
+    padding: 10px 15px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
-     margin-bottom: 20px;
 }
-.load-more:hover,
-.load-more:focus{background-color: #2b7148;}
 
 .is-hidden {
     display: none;
@@ -83,4 +76,24 @@ img {
     font-size: 16px;
     color: #999;
     margin-top: 20px;
+}
+.photo-card {
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 1px rgba(0, 0, 0, .14), 0 2px 1px rgba(0, 0, 0, .2);
+}
+.thumb {
+    height: 180px;
+    width: 270px;
+}
+.info {
+    justify-content: space-around;
+    display: flex;
+}
+.info-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    display: flex;
 }
